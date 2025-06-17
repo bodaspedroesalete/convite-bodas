@@ -1,36 +1,24 @@
-const video = document.getElementById("conviteVideo");
+document.addEventListener('DOMContentLoaded', function () {
+  const video = document.getElementById('video');
 
-function startLoop() {
-  video.currentTime = 0;
-  video.play();
+  // Define o tempo de pausa entre ciclos (3 segundos)
+  const pausa = 3000;
 
-  const onEnd = () => {
+  function iniciarCiclo() {
     setTimeout(() => {
-      video.removeEventListener('ended', onEnd);
-      startLoop();
-    }, 3000);
-  };
+      video.play();
+    }, pausa);
+  }
 
-  video.addEventListener('ended', onEnd);
-}
-
-// Pausa inicial de 3 segundos antes de iniciar o vídeo
-video.pause();
-video.addEventListener('canplaythrough', () => {
-  setTimeout(() => {
-    startLoop();
-  }, 3000);
-});
-
-// Envio do formulário para Google Sheets
-document.getElementById("rsvpForm").addEventListener("submit", async function(e) {
-  e.preventDefault();
-  const formData = new FormData(this);
-  await fetch("https://script.google.com/macros/s/AKfycbzQ80lrIPB3wYGpL4mW-ZfMHbW025KEBCCzgVue_9yOrjDZSZW_r2HLU4eASuaV7yse/exec", {
-    method: "POST",
-    body: formData,
+  video.addEventListener('ended', () => {
+    setTimeout(() => {
+      video.currentTime = 0;
+      video.play();
+    }, pausa);
   });
-  alert("Confirmação recebida com sucesso!");
-  this.reset();
-});
 
+  // Impede autoplay direto e inicia o primeiro ciclo com delay
+  video.pause();
+  video.currentTime = 0;
+  iniciarCiclo();
+});
