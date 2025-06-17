@@ -14,7 +14,7 @@ function startLoop() {
   video.addEventListener('ended', onEnd);
 }
 
-// Pausa inicial antes do primeiro play
+// Pausa inicial de 3 segundos antes de iniciar o vídeo
 video.pause();
 video.addEventListener('canplaythrough', () => {
   setTimeout(() => {
@@ -22,7 +22,7 @@ video.addEventListener('canplaythrough', () => {
   }, 3000);
 });
 
-// Formulário
+// Envio do formulário para Google Sheets
 document.getElementById("rsvpForm").addEventListener("submit", async function(e) {
   e.preventDefault();
   const formData = new FormData(this);
@@ -33,3 +33,4 @@ document.getElementById("rsvpForm").addEventListener("submit", async function(e)
   alert("Confirmação recebida com sucesso!");
   this.reset();
 });
+
