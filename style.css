@@ -142,7 +142,7 @@ video {
   background-color: rgba(180, 140, 50, 0.95);
 }
 
-/* 📱 MOBILE: FORÇA FIX PARA SAFARI */
+/* 📱 MOBILE — FIX PARA SAFARI */
 @media (max-width: 768px) {
   html, body {
     height: auto !important;
@@ -154,25 +154,29 @@ video {
   }
 
   .container {
+    display: flex !important;
     flex-direction: column !important;
     align-items: stretch !important;
     padding: 20px !important;
     gap: 24px !important;
   }
 
+  .texto, .video-wrapper {
+    all: unset;
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
+  }
+
   .texto {
     order: 1 !important;
-    width: 100% !important;
     text-align: left;
-    padding: 0 !important;
   }
 
   .video-wrapper {
     order: 2 !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 0 auto !important;
-    display: block !important;
   }
 
   .video-wrapper video {
@@ -184,7 +188,7 @@ video {
 
   .form-box {
     width: 100% !important;
-    margin: 0 auto !important;
+    margin-top: 20px !important;
   }
 
   .texto h1 {
