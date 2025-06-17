@@ -1,23 +1,26 @@
 const video = document.getElementById("conviteVideo");
 
-function playLoopWithPause() {
+function startLoop() {
   video.currentTime = 0;
   video.play();
 
   const onEnd = () => {
     setTimeout(() => {
       video.removeEventListener('ended', onEnd);
-      playLoopWithPause();
+      startLoop();
     }, 3000);
   };
 
   video.addEventListener('ended', onEnd);
 }
 
-// Espera 3 segundos antes de tocar pela primeira vez
-setTimeout(() => {
-  playLoopWithPause();
-}, 3000);
+// Pausa inicial antes do primeiro play
+video.pause();
+video.addEventListener('canplaythrough', () => {
+  setTimeout(() => {
+    startLoop();
+  }, 3000);
+});
 
 // Formulário
 document.getElementById("rsvpForm").addEventListener("submit", async function(e) {
