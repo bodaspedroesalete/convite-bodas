@@ -59,6 +59,7 @@
       color: #A47A29;
       margin-bottom: 0.2em;
       text-align: center;
+      white-space: nowrap;
     }
 
     .line-decor {
@@ -82,8 +83,14 @@
       line-height: 1.6em;
     }
 
+    .confirmation-note {
+      margin-top: 1.5em;
+      font-size: 1em;
+      text-align: center;
+    }
+
     .button {
-      margin-top: 2em;
+      margin-top: 1em;
       background-color: #A47A29;
       color: white;
       padding: 12px 24px;
@@ -104,14 +111,14 @@
       position: absolute;
       top: 0;
       right: 0;
-      width: 160px;
+      width: 220px;
     }
 
     .arabesco-bottom {
       position: absolute;
       bottom: 0;
       left: 0;
-      width: 160px;
+      width: 220px;
     }
 
     @media (max-width: 768px) {
@@ -136,8 +143,18 @@
         width: 100%;
       }
 
+      h1 {
+        white-space: normal;
+        font-size: 2.8em;
+      }
+
       .line-decor {
         margin: 0.5em auto;
+      }
+
+      .arabesco-top,
+      .arabesco-bottom {
+        width: 140px;
       }
     }
   </style>
@@ -159,6 +176,7 @@
         <p>Convidamos você para compartilhar conosco este momento tão especial.</p>
         <p><strong>Data:</strong> 19 de julho de 2025<br><strong>Horário:</strong> 12h</p>
       </div>
+      <p class="confirmation-note">Por favor, confirme sua presença até o dia 5 de julho.</p>
       <a class="button" href="https://docs.google.com/forms" target="_blank">Confirmar presença</a>
     </div>
   </div>
