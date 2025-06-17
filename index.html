@@ -5,10 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Convite | Bodas de Ouro</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Ballet&family=Kumbh+Sans:wght@700&family=Lato&display=swap" rel="stylesheet">
 </head>
 <body>
+  <img src="arabesco canto superior direito.png" class="arabesco-superior" alt="" />
+  <img src="arabesco canto inferior esquerdo.png" class="arabesco-inferior" alt="" />
+
   <div class="container">
-    <!-- VÍDEO À ESQUERDA NO DESKTOP -->
     <div class="video-wrapper">
       <video id="conviteVideo" muted autoplay playsinline loop>
         <source src="video_loopado.mp4" type="video/mp4" />
@@ -16,11 +19,21 @@
       </video>
     </div>
 
-    <!-- TEXTO À DIREITA NO DESKTOP -->
     <div class="texto">
-      <h1>Pedro & Salete</h1>
-      <p>Com grande alegria, convidamos você para celebrar conosco nossas Bodas de Ouro.</p>
-      <p>Data: 19 de julho de 2025<br>Horário: 12h</p>
+      <h1 class="titulo">Bodas de Ouro</h1>
+      <img src="arabesco_linha.png" alt="" class="arabesco-linha" />
+      <h2 class="subtitulo">PEDRO E SALETE</h2>
+
+      <p class="convite-texto">
+        Cinquenta anos de amor e companheirismo merecem ser celebrados com alegria e gratidão.
+      </p>
+      <p class="convite-texto">
+        Convidamos você para compartilhar conosco este momento tão especial.
+      </p>
+      <p class="convite-texto">
+        Data: <strong>19 de julho de 2025</strong><br>
+        Horário: <strong>12h</strong>
+      </p>
 
       <form id="rsvpForm" class="form-box">
         <input type="text" name="Nome" placeholder="Seu nome" required />
