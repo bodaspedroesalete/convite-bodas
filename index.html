@@ -13,7 +13,10 @@
       background-image: url('Cópia de brand.jpg');
       background-size: cover;
       background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
       color: #644F25;
+      overflow-x: hidden;
     }
 
     .container {
@@ -25,6 +28,7 @@
       padding: 4vw;
       gap: 4vw;
       flex-wrap: wrap;
+      box-sizing: border-box;
     }
 
     .video-wrapper {
@@ -32,7 +36,6 @@
       width: 30vw;
       max-width: 400px;
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-      border: 10px solid #f9f5ef;
     }
 
     video {
@@ -52,15 +55,14 @@
 
     h1 {
       font-family: 'Ballet', cursive;
-      font-size: 3em;
+      font-size: 4em;
       color: #A47A29;
-      margin-bottom: 0.3em;
+      margin-bottom: 0.2em;
       text-align: center;
-      text-shadow: 1px 1px #644F25;
     }
 
     .line-decor {
-      margin: 0.5em auto;
+      margin: 0.2em auto 1em;
       width: 150px;
     }
 
