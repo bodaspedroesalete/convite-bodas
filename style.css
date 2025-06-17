@@ -139,23 +139,36 @@ video {
 
 /* Mobile */
 @media (max-width: 768px) {
+  html, body {
+    height: auto;
+    min-height: 100%;
+    overflow-y: auto;
+  }
+
   .container {
-    flex-direction: column-reverse;
+    flex-direction: column;
     align-items: flex-start;
-    min-height: auto;
+    height: auto;
+    min-height: 100%;
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
   }
 
   .video-wrapper {
-    max-width: 100%;
-    margin-bottom: 20px;
+    width: 100%;
     order: 2;
   }
 
   .texto {
-    padding-left: 0;
-    text-align: left;
-    width: 100%;
     order: 1;
+    width: 100%;
+    text-align: left;
+    padding-left: 0;
+  }
+
+  .texto h1 {
+    font-size: 1.8em;
   }
 
   .form-box {
