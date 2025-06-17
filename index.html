@@ -42,15 +42,19 @@
     }
 
     .video-wrapper {
-      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       width: 30vw;
       max-width: 400px;
+      aspect-ratio: 3/4;
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
     }
 
     video {
       width: 100%;
-      height: auto;
+      height: 100%;
+      object-fit: cover;
       display: block;
     }
 
@@ -98,6 +102,7 @@
       font-size: 0.9em;
       text-align: left;
       width: 100%;
+      align-self: flex-start;
     }
 
     .button {
@@ -142,6 +147,7 @@
       .video-wrapper {
         width: 100%;
         max-width: none;
+        aspect-ratio: auto;
       }
 
       .text-content {
@@ -188,7 +194,7 @@
         <p><strong>Data:</strong> 19 de julho de 2025<br><strong>Horário:</strong> 12h</p>
       </div>
       <p class="confirmation-note">Por favor, confirme sua presença até o dia 5 de julho.</p>
-      <a class="button" href="https://forms.gle/vi119DK1whv8rFWt9" target="_blank">Confirmar presença</a>
+      <a class="button" href="https://forms.gle/vi119DK1whv8rFWt9" target="_blank" rel="noopener noreferrer">Confirmar presença</a>
     </div>
   </div>
 
