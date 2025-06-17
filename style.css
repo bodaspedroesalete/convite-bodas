@@ -129,7 +129,6 @@ video {
   background-color: rgba(180, 140, 50, 0.95);
 }
 
-/* Mobile */
 @media (max-width: 768px) {
   html, body {
     height: auto;
@@ -140,11 +139,26 @@ video {
   .container {
     flex-direction: column;
     align-items: flex-start;
-    padding: 20px;
+    height: auto;
+    min-height: 100%;
     gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .video-wrapper {
+    width: 100%;
+    order: 2;
+  }
+
+  video {
+    width: 100% !important;
+    height: auto !important;
+    display: block;
   }
 
   .texto {
+    order: 1;
     width: 100%;
     text-align: left;
     padding-left: 0;
@@ -154,19 +168,9 @@ video {
     font-size: 1.8em;
   }
 
-  .video-wrapper {
-    width: 100%;
-    margin: 16px 0;
-  }
-
-  video {
-    width: 100% !important;
-    height: auto !important;
-    display: block;
-  }
-
   .form-box {
-    margin: 0;
-    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
+
