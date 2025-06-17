@@ -29,6 +29,16 @@
       gap: 4vw;
       flex-wrap: wrap;
       box-sizing: border-box;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s ease-out forwards;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .video-wrapper {
@@ -85,8 +95,9 @@
 
     .confirmation-note {
       margin-top: 1.5em;
-      font-size: 1em;
-      text-align: center;
+      font-size: 0.9em;
+      text-align: left;
+      width: 100%;
     }
 
     .button {
@@ -177,7 +188,7 @@
         <p><strong>Data:</strong> 19 de julho de 2025<br><strong>Horário:</strong> 12h</p>
       </div>
       <p class="confirmation-note">Por favor, confirme sua presença até o dia 5 de julho.</p>
-      <a class="button" href="https://docs.google.com/forms" target="_blank">Confirmar presença</a>
+      <a class="button" href="https://forms.gle/vi119DK1whv8rFWt9" target="_blank">Confirmar presença</a>
     </div>
   </div>
 
