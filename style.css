@@ -23,7 +23,7 @@ html, body {
   gap: 40px;
 }
 
-/* VÍDEO À ESQUERDA */
+/* VÍDEO À ESQUERDA (DESKTOP) */
 .video-wrapper {
   flex: 1;
   max-width: 33%;
@@ -41,7 +41,7 @@ video {
   display: block;
 }
 
-/* TEXTO À DIREITA */
+/* TEXTO À DIREITA (DESKTOP) */
 .texto {
   flex: 2;
   padding-left: 20px;
@@ -56,11 +56,11 @@ video {
   color: #3a3a3a;
 }
 
-/* TEXTO & FORMULÁRIO */
 .texto p {
   margin: 1em 0;
 }
 
+/* FORMULÁRIO */
 .form-box {
   display: flex;
   flex-direction: column;
@@ -93,6 +93,7 @@ video {
   color: #666;
 }
 
+/* PRESENÇA */
 .radio-wrapper {
   background: rgba(255, 255, 255, 0.15);
   border: 1px solid rgba(255, 255, 255, 0.4);
@@ -141,44 +142,52 @@ video {
   background-color: rgba(180, 140, 50, 0.95);
 }
 
-/* 📱 MOBILE */
+/* 📱 MOBILE: FORÇA FIX PARA SAFARI */
 @media (max-width: 768px) {
   html, body {
-    height: auto;
-    min-height: 100%;
-    overflow-y: auto;
+    height: auto !important;
+    min-height: 100% !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    padding: 0;
+    margin: 0;
   }
 
   .container {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 20px;
-    gap: 24px;
-  }
-
-  .video-wrapper {
-    width: 100%;
-    order: 2;
-  }
-
-  video {
-    width: 100% !important;
-    height: auto !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    padding: 20px !important;
+    gap: 24px !important;
   }
 
   .texto {
-    width: 100%;
+    order: 1 !important;
+    width: 100% !important;
     text-align: left;
-    padding-left: 0;
-    order: 1;
+    padding: 0 !important;
+  }
+
+  .video-wrapper {
+    order: 2 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    display: block !important;
+  }
+
+  .video-wrapper video {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  .form-box {
+    width: 100% !important;
+    margin: 0 auto !important;
   }
 
   .texto h1 {
     font-size: 1.8em;
-  }
-
-  .form-box {
-    margin: 0;
-    width: 100%;
   }
 }
