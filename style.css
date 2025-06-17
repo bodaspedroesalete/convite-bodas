@@ -26,6 +26,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  order: 2;
 }
 
 video {
@@ -41,18 +42,21 @@ video {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  order: 1;
 }
 
 .titulo {
   font-family: 'Ballet', cursive;
-  font-size: 4.5em;
+  font-size: 6em;
   color: #A47A29;
   margin: 0;
+  font-weight: normal;
 }
 
 .arabesco-linha {
   width: 150px;
-  margin: 10px 0;
+  margin: 10px auto;
+  display: block;
 }
 
 .subtitulo {
@@ -62,12 +66,18 @@ video {
   color: #644F25;
   font-weight: 400;
   margin-bottom: 30px;
+  text-align: center;
+  width: 100%;
 }
 
 .convite-texto {
   font-size: 1.2em;
-  line-height: 1.6;
+  line-height: 1.4;
   margin-bottom: 40px;
+}
+
+.convite-texto strong {
+  font-weight: bold;
 }
 
 .form-box {
@@ -88,6 +98,7 @@ input, button {
   border-radius: 8px;
   font-size: 1em;
   font-family: 'Lato', sans-serif;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .radio-wrapper {
@@ -98,30 +109,32 @@ input, button {
 }
 
 button {
-  background-color: #A47A29;
+  background-color: #644F25;
   color: white;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
 button:hover {
-  background-color: #866122;
+  background-color: #4d3c1b;
 }
 
 .arabesco-superior {
   position: absolute;
   top: 0;
   right: 0;
-  width: 100px;
+  width: 180px;
   z-index: 1;
+  content: url('https://i.ibb.co/QF8Ky7fv/arabesco-canto-superior-direito.png');
 }
 
 .arabesco-inferior {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 100px;
+  width: 180px;
   z-index: 1;
+  content: url('https://i.ibb.co/xt5XmYr8/arabesco-canto-inferior-esquerdo.png');
 }
 
 @media (max-width: 768px) {
@@ -132,7 +145,7 @@ button:hover {
   }
 
   .titulo {
-    font-size: 3.2em;
+    font-size: 4em;
     text-align: center;
   }
 
