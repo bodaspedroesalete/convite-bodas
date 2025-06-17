@@ -22,17 +22,18 @@
          <strong>Horário:</strong> 12h</p>
 
       <form id="rsvpForm" class="form-box">
-        <input type="text" name="nome" placeholder="Seu nome completo" required />
+  <input type="text" name="nome" placeholder="Seu nome completo" required />
 
-        <div class="radio-group">
-          <span>Vai comparecer?</span>
-          <label><input type="radio" name="presenca" value="Sim" required /> Sim</label>
-          <label><input type="radio" name="presenca" value="Não" /> Não</label>
-        </div>
+  <div class="radio-wrapper">
+    <span class="radio-title">Vai comparecer?</span>
+    <label><input type="radio" name="presenca" value="Sim" required /> Sim</label>
+    <label><input type="radio" name="presenca" value="Não" /> Não</label>
+  </div>
 
-        <input type="number" name="acompanhantes" placeholder="Acompanhantes" min="0" />
-        <button type="submit">Confirmar presença</button>
-      </form>
+  <input type="number" name="acompanhantes" placeholder="Acompanhantes" min="0" />
+  <button type="submit">Confirmar presença</button>
+</form>
+
     </div>
   </div>
   <script src="script.js"></script>
