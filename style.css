@@ -15,11 +15,12 @@ html, body {
 .container {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   padding: 40px;
   box-sizing: border-box;
   min-height: 100dvh;
+  gap: 40px;
 }
 
 .video-wrapper {
@@ -39,7 +40,7 @@ video {
 
 .texto {
   flex: 2;
-  padding-left: 40px;
+  padding-left: 20px;
   color: #3a3a3a;
 }
 
@@ -129,6 +130,7 @@ video {
   background-color: rgba(180, 140, 50, 0.95);
 }
 
+/* MOBILE */
 @media (max-width: 768px) {
   html, body {
     height: auto;
@@ -139,11 +141,8 @@ video {
   .container {
     flex-direction: column;
     align-items: flex-start;
-    height: auto;
-    min-height: 100%;
-    gap: 20px;
     padding: 20px;
-    box-sizing: border-box;
+    gap: 20px;
   }
 
   .video-wrapper {
@@ -158,10 +157,10 @@ video {
   }
 
   .texto {
-    order: 1;
     width: 100%;
     text-align: left;
     padding-left: 0;
+    order: 1;
   }
 
   .texto h1 {
@@ -169,8 +168,7 @@ video {
   }
 
   .form-box {
-    margin-left: 0;
-    margin-right: 0;
+    margin: 0;
+    width: 100%;
   }
 }
-
