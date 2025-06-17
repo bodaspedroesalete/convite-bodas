@@ -14,29 +14,23 @@ html, body {
 
 .container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: flex-start;
-  padding: 20px;
-  gap: 24px;
+  justify-content: center;
+  padding: 40px;
   box-sizing: border-box;
   min-height: 100dvh;
+  gap: 40px;
 }
 
-/* Título */
-h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.5em;
-  margin-bottom: 0.5em;
-  color: #3a3a3a;
-  width: 100%;
-}
-
-/* Vídeo */
+/* VÍDEO À ESQUERDA */
 .video-wrapper {
-  width: 100%;
+  flex: 1;
+  max-width: 33%;
   display: flex;
   justify-content: center;
   align-items: center;
+  order: 1;
 }
 
 video {
@@ -47,17 +41,26 @@ video {
   display: block;
 }
 
-/* Texto */
+/* TEXTO À DIREITA */
 .texto {
-  width: 100%;
+  flex: 2;
+  padding-left: 20px;
+  color: #3a3a3a;
+  order: 2;
+}
+
+.texto h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
   color: #3a3a3a;
 }
 
+/* TEXTO & FORMULÁRIO */
 .texto p {
   margin: 1em 0;
 }
 
-/* Formulário */
 .form-box {
   display: flex;
   flex-direction: column;
@@ -69,8 +72,8 @@ video {
   -webkit-backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.4);
   max-width: 400px;
+  margin-top: 30px;
   box-sizing: border-box;
-  margin-top: 20px;
 }
 
 .form-box input,
@@ -90,7 +93,6 @@ video {
   color: #666;
 }
 
-/* Presença */
 .radio-wrapper {
   background: rgba(255, 255, 255, 0.15);
   border: 1px solid rgba(255, 255, 255, 0.4);
@@ -124,7 +126,6 @@ video {
   color: #333;
 }
 
-/* Botão */
 .form-box button {
   background-color: rgba(200, 160, 60, 0.9);
   color: white;
@@ -140,29 +141,44 @@ video {
   background-color: rgba(180, 140, 50, 0.95);
 }
 
-/* DESKTOP: layout horizontal */
-@media (min-width: 769px) {
-  .container {
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: center;
-    padding: 40px;
-    gap: 40px;
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+  html, body {
+    height: auto;
+    min-height: 100%;
+    overflow-y: auto;
   }
 
-  h1 {
-    width: 100%;
-    flex-basis: 100%;
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 24px;
   }
 
   .video-wrapper {
-    flex: 1;
-    max-width: 33%;
-    margin: 0;
+    width: 100%;
+    order: 2;
+  }
+
+  video {
+    width: 100% !important;
+    height: auto !important;
   }
 
   .texto {
-    flex: 2;
-    padding-left: 20px;
+    width: 100%;
+    text-align: left;
+    padding-left: 0;
+    order: 1;
+  }
+
+  .texto h1 {
+    font-size: 1.8em;
+  }
+
+  .form-box {
+    margin: 0;
+    width: 100%;
   }
 }
