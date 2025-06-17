@@ -1,14 +1,13 @@
 body {
   margin: 0;
-  font-family: 'Open Sans', sans-serif;
-  background: url('textura_champanhe_papel.jpg') no-repeat center center fixed;
+  font-family: 'Lato', sans-serif;
+  background: url('Cópia de brand.png') no-repeat center center fixed;
   background-size: cover;
+  color: #644F25;
 }
 
 html, body {
   height: 100%;
-  margin: 0;
-  padding: 0;
   overflow-x: hidden;
 }
 
@@ -21,16 +20,16 @@ html, body {
   box-sizing: border-box;
   min-height: 100dvh;
   gap: 40px;
+  position: relative;
+  z-index: 1;
 }
 
-/* VÍDEO À ESQUERDA (DESKTOP) */
 .video-wrapper {
   flex: 1;
   max-width: 33%;
   display: flex;
   justify-content: center;
   align-items: center;
-  order: 1;
 }
 
 video {
@@ -41,26 +40,38 @@ video {
   display: block;
 }
 
-/* TEXTO À DIREITA (DESKTOP) */
 .texto {
   flex: 2;
   padding-left: 20px;
-  color: #3a3a3a;
-  order: 2;
 }
 
-.texto h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.5em;
-  margin-bottom: 0.5em;
-  color: #3a3a3a;
+.titulo {
+  font-family: 'Ballet', cursive;
+  font-size: 3em;
+  color: #A47A29;
+  text-shadow: 1px 1px 1px #644F25;
+  margin-bottom: 0.2em;
 }
 
-.texto p {
-  margin: 1em 0;
+.arabesco-linha {
+  width: 120px;
+  margin: 0.5em 0;
+  display: block;
 }
 
-/* FORMULÁRIO */
+.subtitulo {
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: 1.6em;
+  color: #644F25;
+  margin-bottom: 1em;
+}
+
+.convite-texto {
+  font-size: 1em;
+  line-height: 1.6;
+  margin-bottom: 1em;
+}
+
 .form-box {
   display: flex;
   flex-direction: column;
@@ -72,7 +83,6 @@ video {
   -webkit-backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.4);
   max-width: 400px;
-  margin-top: 30px;
   box-sizing: border-box;
 }
 
@@ -84,7 +94,7 @@ video {
   padding: 10px;
   font-size: 1em;
   color: #333;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Lato', sans-serif;
   width: 100%;
   box-sizing: border-box;
 }
@@ -93,7 +103,6 @@ video {
   color: #666;
 }
 
-/* PRESENÇA */
 .radio-wrapper {
   background: rgba(255, 255, 255, 0.15);
   border: 1px solid rgba(255, 255, 255, 0.4);
@@ -142,56 +151,73 @@ video {
   background-color: rgba(180, 140, 50, 0.95);
 }
 
-/* 📱 MOBILE — FIX PARA SAFARI */
+.arabesco-superior,
+.arabesco-inferior {
+  position: absolute;
+  z-index: 0;
+  width: 250px;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.arabesco-superior {
+  top: 0;
+  right: 0;
+}
+
+.arabesco-inferior {
+  bottom: 0;
+  left: 0;
+}
+
 @media (max-width: 768px) {
-  html, body {
-    height: auto !important;
-    min-height: 100% !important;
-    overflow-y: auto !important;
-    overflow-x: hidden !important;
-    padding: 0;
-    margin: 0;
-  }
-
   .container {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: stretch !important;
-    padding: 20px !important;
-    gap: 24px !important;
-  }
-
-  .texto, .video-wrapper {
-    all: unset;
-    display: block !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 0 auto !important;
-    box-sizing: border-box !important;
-  }
-
-  .texto {
-    order: 1 !important;
-    text-align: left;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 20px;
   }
 
   .video-wrapper {
-    order: 2 !important;
+    width: 100%;
+    order: 3;
+    margin: 20px 0;
   }
 
-  .video-wrapper video {
-    display: block !important;
+  video {
     width: 100% !important;
-    max-width: 100% !important;
     height: auto !important;
   }
 
-  .form-box {
-    width: 100% !important;
-    margin-top: 20px !important;
+  .texto {
+    order: 1;
+    width: 100%;
+    text-align: left;
+    padding-left: 0;
   }
 
-  .texto h1 {
-    font-size: 1.8em;
+  .titulo {
+    font-size: 2.2em;
+    text-align: center;
+  }
+
+  .subtitulo {
+    font-size: 1.4em;
+    text-align: center;
+  }
+
+  .arabesco-linha {
+    margin: 0.4em auto;
+  }
+
+  .form-box {
+    width: 100%;
+  }
+
+  .arabesco-superior {
+    width: 180px;
+  }
+
+  .arabesco-inferior {
+    width: 180px;
   }
 }
