@@ -8,21 +8,20 @@
 </head>
 <body>
   <div class="container">
-    <!-- VÍDEO à esquerda no desktop -->
-    <div class="video-wrapper">
-      <video id="conviteVideo" muted autoplay playsinline>
-       <source src="video_loopado.mp4" type="video/mp4" />
-        Seu navegador não suporta vídeo.
-      </video>
-    </div>
-
-    <!-- TEXTO à direita -->
     <div class="texto">
       <h1>Pedro & Salete</h1>
+
+      <!-- VÍDEO abaixo do título, dentro da área de texto -->
+      <div class="video-wrapper">
+        <video id="conviteVideo" muted autoplay playsinline loop>
+          <source src="video_loopado.mp4" type="video/mp4" />
+          Seu navegador não suporta vídeo.
+        </video>
+      </div>
+
       <p>Com grande alegria, convidamos você para celebrar conosco nossas Bodas de Ouro.</p>
       <p>Data: 19 de julho de 2025<br>Horário: 12h</p>
 
-      <!-- FORMULÁRIO -->
       <form id="rsvpForm" class="form-box">
         <input type="text" name="Nome" placeholder="Seu nome" required />
         <div class="radio-wrapper">
