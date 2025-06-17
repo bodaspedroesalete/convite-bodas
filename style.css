@@ -1,3 +1,4 @@
+/* Fonte e plano de fundo */
 body {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
@@ -5,16 +6,25 @@ body {
   background-size: cover;
 }
 
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Container geral */
 .container {
   display: flex;
-  height: 100vh;
-  width: 100vw;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   padding: 40px;
   box-sizing: border-box;
+  min-height: 100dvh;
 }
 
+/* Vídeo */
 .video-wrapper {
   flex: 1;
   max-width: 33%;
@@ -30,6 +40,7 @@ video {
   box-shadow: 0 10px 20px rgba(0,0,0,0.3);
 }
 
+/* Texto */
 .texto {
   flex: 2;
   padding-left: 40px;
@@ -42,6 +53,7 @@ video {
   margin-bottom: 0.5em;
 }
 
+/* Formulário */
 .form-box {
   display: flex;
   flex-direction: column;
@@ -54,8 +66,10 @@ video {
   border: 1px solid rgba(255, 255, 255, 0.4);
   max-width: 400px;
   margin-top: 30px;
+  box-sizing: border-box;
 }
 
+/* Campos de entrada */
 .form-box input,
 .form-box select {
   background: rgba(255, 255, 255, 0.15);
@@ -65,24 +79,49 @@ video {
   font-size: 1em;
   color: #333;
   font-family: 'Open Sans', sans-serif;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .form-box input::placeholder {
   color: #666;
 }
 
-.radio-group {
+/* Moldura grupo "Vai comparecer?" */
+.radio-wrapper {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 8px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 6px;
   font-size: 0.95em;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.radio-wrapper label {
+  font-weight: normal;
   color: #333;
 }
 
-.radio-group label {
-  font-weight: normal;
+.radio-wrapper input[type="radio"] {
+  margin-right: 6px;
 }
 
+.radio-wrapper:focus-within {
+  border-color: rgba(200, 160, 60, 0.9);
+}
+
+.radio-title {
+  font-weight: 500;
+  margin-bottom: 4px;
+  color: #333;
+}
+
+/* Botão */
 .form-box button {
   background-color: rgba(200, 160, 60, 0.9);
   color: white;
@@ -98,49 +137,12 @@ video {
   background-color: rgba(180, 140, 50, 0.95);
 }
 
+/* Mobile */
 @media (max-width: 768px) {
   .container {
-    flex-direction: column;
-  }
-
-  .video-wrapper {
-    max-width: 100%;
-    margin-bottom: 20px;
-  }
-
-  .texto {
-    padding-left: 0;
-    text-align: center;
-  }
-
-  .form-box {
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .radio-wrapper {
-  background: rgba(255, 255, 255, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  border-radius: 8px;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.radio-wrapper input {
-  margin-right: 6px;
-}
-
-.radio-title {
-  font-size: 0.95em;
-  font-weight: 500;
-  color: #333;
-}
-
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: flex-start;
+    min-height: auto;
   }
 
   .video-wrapper {
@@ -161,6 +163,3 @@ video {
     margin-right: 0;
   }
 }
-
-}
-
