@@ -1,48 +1,47 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Convite Bodas de Ouro</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bodas de Ouro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Ballet&family=Kumbh+Sans&family=Lato&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <img class="arabesco-superior" alt="Arabesco superior direito">
-  <img class="arabesco-inferior" alt="Arabesco inferior esquerdo">
+  <div class="arabesco-superior"></div>
+  <div class="arabesco-inferior"></div>
 
   <div class="container">
-    <div class="video-wrapper">
-      <video id="video" autoplay muted playsinline>
-        <source src="video_loopado.mp4" type="video/mp4">
-        Seu navegador não suporta o vídeo.
-      </video>
-    </div>
-
     <div class="texto">
       <h1 class="titulo">Bodas de Ouro</h1>
-      <img src="https://i.ibb.co/cS4Zhg7g/arabesco-linha.png" alt="linha arabesco" class="arabesco-linha">
+      <img class="arabesco-linha" src="https://i.ibb.co/cS4Zhg7g/arabesco-linha.png" alt="Arabesco linha" />
       <div class="subtitulo">PEDRO E SALETE</div>
-
-      <div class="convite-texto">
+      <div class="video-wrapper">
+        <video id="video" autoplay muted playsinline>
+          <source src="video_loopado.mp4" type="video/mp4" />
+          Seu navegador não suporta vídeo HTML5.
+        </video>
+      </div>
+      <p class="convite-texto">
         Cinquenta anos de amor e companheirismo merecem ser celebrados com alegria e gratidão.<br><br>
         Convidamos você para compartilhar conosco este momento tão especial.<br><br>
-        Data: 19 de julho de 2025<br>
-        Horário: 12h
-      </div>
-
-      <form class="form-box" id="rsvp-form">
-        <input type="text" name="Nome" placeholder="Seu nome" required>
+        <strong>Data:</strong> 19 de julho de 2025<br>
+        <strong>Horário:</strong> 12h
+      </p>
+      <form class="form-box" name="confirmation-form">
+        <input type="text" name="Nome" placeholder="Seu nome" required />
         <div class="radio-wrapper">
-          <div class="radio-title">Vai comparecer?</div>
-          <label><input type="radio" name="Presença" value="Sim" required> Sim</label>
-          <label><input type="radio" name="Presença" value="Não"> Não</label>
+          <label><input type="checkbox" name="Presença" value="Sim" /> Sim</label>
+          <label><input type="checkbox" name="Presença" value="Não" /> Não</label>
         </div>
-        <input type="number" name="Acompanhantes" placeholder="Número de acompanhantes" min="0">
+        <input type="number" name="Acompanhantes" placeholder="Número de acompanhantes" min="0" />
         <button type="submit">Confirmar presença</button>
       </form>
     </div>
   </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
