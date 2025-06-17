@@ -1,4 +1,3 @@
-/* Fonte e plano de fundo */
 body {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
@@ -13,7 +12,6 @@ html, body {
   overflow-x: hidden;
 }
 
-/* Container geral */
 .container {
   display: flex;
   flex-direction: row;
@@ -24,7 +22,6 @@ html, body {
   min-height: 100dvh;
 }
 
-/* Vídeo */
 .video-wrapper {
   flex: 1;
   max-width: 33%;
@@ -40,7 +37,6 @@ video {
   box-shadow: 0 10px 20px rgba(0,0,0,0.3);
 }
 
-/* Texto */
 .texto {
   flex: 2;
   padding-left: 40px;
@@ -53,7 +49,6 @@ video {
   margin-bottom: 0.5em;
 }
 
-/* Formulário */
 .form-box {
   display: flex;
   flex-direction: column;
@@ -69,7 +64,6 @@ video {
   box-sizing: border-box;
 }
 
-/* Campos de entrada */
 .form-box input,
 .form-box select {
   background: rgba(255, 255, 255, 0.15);
@@ -87,7 +81,6 @@ video {
   color: #666;
 }
 
-/* Moldura grupo "Vai comparecer?" */
 .radio-wrapper {
   background: rgba(255, 255, 255, 0.15);
   border: 1px solid rgba(255, 255, 255, 0.4);
@@ -121,7 +114,6 @@ video {
   color: #333;
 }
 
-/* Botão */
 .form-box button {
   background-color: rgba(200, 160, 60, 0.9);
   color: white;
@@ -137,7 +129,6 @@ video {
   background-color: rgba(180, 140, 50, 0.95);
 }
 
-/* Mobile */
 @media (max-width: 768px) {
   html, body {
     height: auto;
@@ -158,6 +149,12 @@ video {
   .video-wrapper {
     width: 100%;
     order: 2;
+  }
+
+  video {
+    width: 100% !important;
+    height: auto !important;
+    display: block;
   }
 
   .texto {
