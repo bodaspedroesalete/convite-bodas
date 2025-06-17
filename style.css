@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: 'Lato', sans-serif;
-  background: url('Cópia de brand.png') no-repeat center center fixed;
+  background: url('https://i.ibb.co/wb3ybBV/C-pia-de-brand.jpg') no-repeat center center fixed;
   background-size: cover;
   color: #644F25;
 }
@@ -47,15 +47,19 @@ video {
 
 .titulo {
   font-family: 'Ballet', cursive;
-  font-size: 3em;
+  font-size: 4em;
   color: #A47A29;
   text-shadow: 1px 1px 1px #644F25;
   margin-bottom: 0.2em;
+  text-align: center;
+  padding: 0 20px;
+  width: 100%;
+  max-width: 100%;
 }
 
 .arabesco-linha {
   width: 120px;
-  margin: 0.5em 0;
+  margin: 0.5em auto;
   display: block;
 }
 
@@ -64,6 +68,8 @@ video {
   font-size: 1.6em;
   color: #644F25;
   margin-bottom: 1em;
+  letter-spacing: 0.5em;
+  text-align: center;
 }
 
 .convite-texto {
@@ -163,11 +169,13 @@ video {
 .arabesco-superior {
   top: 0;
   right: 0;
+  content: url('https://i.ibb.co/QF8Ky7fv/arabesco-canto-superior-direito.png');
 }
 
 .arabesco-inferior {
   bottom: 0;
   left: 0;
+  content: url('https://i.ibb.co/xt5XmYr8/arabesco-canto-inferior-esquerdo.png');
 }
 
 @media (max-width: 768px) {
@@ -178,26 +186,30 @@ video {
   }
 
   .video-wrapper {
-    width: 100%;
-    order: 3;
+    width: 100% !important;
+    order: 2;
     margin: 20px 0;
+    display: block;
   }
 
   video {
     width: 100% !important;
+    max-width: 100% !important;
     height: auto !important;
+    display: block !important;
   }
 
   .texto {
-    order: 1;
+    order: 3;
     width: 100%;
     text-align: left;
     padding-left: 0;
   }
 
   .titulo {
-    font-size: 2.2em;
+    font-size: 2.8em;
     text-align: center;
+    padding: 0 10px;
   }
 
   .subtitulo {
@@ -207,6 +219,7 @@ video {
 
   .arabesco-linha {
     margin: 0.4em auto;
+    content: url('https://i.ibb.co/cS4Zhg7g/arabesco-linha.png');
   }
 
   .form-box {
