@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Convite | Bodas de Ouro</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="video-wrapper">
+      <video id="videoPlayer" muted playsinline></video>
+    </div>
+    <div class="texto">
+      <h1>Bodas de Ouro de Pedro e Salete</h1>
+      <p>Cinquenta anos de amor e companheirismo merecem ser celebrados com alegria e gratidão.</p>
+      <p>Convidamos você para compartilhar conosco este momento tão especial.</p>
+      <p><strong>🗓️ Data:</strong> 19 de julho de 2025<br>
+         <strong>⏰ Horário:</strong> 12h</p>
+      <form id="rsvpForm">
+        <input type="text" name="nome" placeholder="Seu nome" required />
+        <select name="presenca">
+          <option value="Sim">Sim, estarei presente</option>
+          <option value="Não">Não poderei comparecer</option>
+        </select>
+        <input type="number" name="acompanhantes" placeholder="Acompanhantes" min="0" />
+        <button type="submit">Confirmar presença</button>
+      </form>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

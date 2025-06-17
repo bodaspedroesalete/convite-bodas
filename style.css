@@ -1,0 +1,68 @@
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  background: url('textura_champanhe_papel.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.video-wrapper {
+  flex: 1;
+  max-width: 33%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+video {
+  width: 100%;
+  height: auto;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  border-radius: 8px;
+}
+
+.texto {
+  flex: 2;
+  padding-left: 40px;
+  color: #3a3a3a;
+}
+
+.texto h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+}
+
+.texto form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.texto input, .texto select {
+  padding: 10px;
+  font-size: 1em;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.texto button {
+  background: goldenrod;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+}
