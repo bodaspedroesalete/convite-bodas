@@ -14,8 +14,12 @@ function playLoopWithPause() {
   video.addEventListener('ended', onEnd);
 }
 
-playLoopWithPause();
+// Espera 3 segundos antes de tocar pela primeira vez
+setTimeout(() => {
+  playLoopWithPause();
+}, 3000);
 
+// Formulário
 document.getElementById("rsvpForm").addEventListener("submit", async function(e) {
   e.preventDefault();
   const formData = new FormData(this);
