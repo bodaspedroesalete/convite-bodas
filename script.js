@@ -1,3 +1,16 @@
+const video = document.getElementById("conviteVideo");
+
+function playWithPause() {
+  video.currentTime = 0;
+  video.play();
+
+  video.onended = async () => {
+    await new Promise(resolve => setTimeout(resolve, 3000));
+    playWithPause();
+  };
+}
+
+playWithPause();
 
 document.getElementById("rsvpForm").addEventListener("submit", async function(e) {
   e.preventDefault();
