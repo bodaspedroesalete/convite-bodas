@@ -1,32 +1,28 @@
+/* style.css */
+
 body {
   margin: 0;
   font-family: 'Lato', sans-serif;
-  background: url('https://i.ibb.co/wb3ybBV/C-pia-de-brand.jpg') no-repeat center center fixed;
-  background-size: cover;
   color: #644F25;
-}
-
-html, body {
-  height: 100%;
-  overflow-x: hidden;
+  background-image: url('https://i.ibb.co/wb3ybBV/C-pia-de-brand.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .container {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
   justify-content: center;
-  padding: 40px;
-  box-sizing: border-box;
-  min-height: 100dvh;
-  gap: 40px;
-  position: relative;
-  z-index: 1;
+  align-items: flex-start;
+  padding: 5vh 5vw;
+  gap: 3vw;
+  flex-wrap: wrap;
 }
 
 .video-wrapper {
-  flex: 1;
-  max-width: 33%;
+  flex: 1 1 33%;
+  max-width: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -36,201 +32,131 @@ video {
   width: 100%;
   height: auto;
   border-radius: 8px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-  display: block;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
 .texto {
-  flex: 2;
-  padding-left: 20px;
+  flex: 1 1 60%;
+  max-width: 650px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .titulo {
   font-family: 'Ballet', cursive;
-  font-size: 4em;
+  font-size: 4.5em;
   color: #A47A29;
-  text-shadow: 1px 1px 1px #644F25;
-  margin-bottom: 0.2em;
-  text-align: center;
-  padding: 0 20px;
-  width: 100%;
-  max-width: 100%;
+  margin: 0;
 }
 
 .arabesco-linha {
-  width: 120px;
-  margin: 0.5em auto;
-  display: block;
+  width: 150px;
+  margin: 10px 0;
 }
 
 .subtitulo {
   font-family: 'Kumbh Sans', sans-serif;
-  font-size: 1.6em;
-  color: #644F25;
-  margin-bottom: 1em;
+  font-size: 2em;
   letter-spacing: 0.5em;
-  text-align: center;
+  color: #644F25;
+  font-weight: 400;
+  margin-bottom: 30px;
 }
 
 .convite-texto {
-  font-size: 1em;
+  font-size: 1.2em;
   line-height: 1.6;
-  margin-bottom: 1em;
+  margin-bottom: 40px;
 }
 
 .form-box {
+  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  padding: 20px;
-  border-radius: 16px;
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  max-width: 400px;
-  box-sizing: border-box;
+  gap: 15px;
 }
 
-.form-box input,
-.form-box select {
-  background: rgba(255, 255, 255, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  border-radius: 8px;
+input, button {
   padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
   font-size: 1em;
-  color: #333;
   font-family: 'Lato', sans-serif;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.form-box input::placeholder {
-  color: #666;
 }
 
 .radio-wrapper {
-  background: rgba(255, 255, 255, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  border: 1px solid #ccc;
   border-radius: 8px;
   padding: 10px;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  font-size: 0.95em;
-  width: 100%;
-  box-sizing: border-box;
-  transition: border-color 0.3s ease;
+  background: rgba(255, 255, 255, 0.5);
 }
 
-.radio-wrapper label {
-  font-weight: normal;
-  color: #333;
-}
-
-.radio-wrapper input[type="radio"] {
-  margin-right: 6px;
-}
-
-.radio-wrapper:focus-within {
-  border-color: rgba(200, 160, 60, 0.9);
-}
-
-.radio-title {
-  font-weight: 500;
-  margin-bottom: 4px;
-  color: #333;
-}
-
-.form-box button {
-  background-color: rgba(200, 160, 60, 0.9);
+button {
+  background-color: #A47A29;
   color: white;
-  border: none;
-  padding: 10px;
-  border-radius: 8px;
-  font-size: 1em;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s;
 }
 
-.form-box button:hover {
-  background-color: rgba(180, 140, 50, 0.95);
-}
-
-.arabesco-superior,
-.arabesco-inferior {
-  position: absolute;
-  z-index: 0;
-  width: 250px;
-  opacity: 0.3;
-  pointer-events: none;
+button:hover {
+  background-color: #866122;
 }
 
 .arabesco-superior {
+  position: absolute;
   top: 0;
   right: 0;
-  content: url('https://i.ibb.co/QF8Ky7fv/arabesco-canto-superior-direito.png');
+  width: 100px;
+  z-index: 1;
 }
 
 .arabesco-inferior {
+  position: absolute;
   bottom: 0;
   left: 0;
-  content: url('https://i.ibb.co/xt5XmYr8/arabesco-canto-inferior-esquerdo.png');
+  width: 100px;
+  z-index: 1;
 }
 
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
-    align-items: stretch;
+    align-items: center;
     padding: 20px;
   }
 
-  .video-wrapper {
-    width: 100% !important;
-    order: 2;
-    margin: 20px 0;
-    display: block;
-  }
-
-  video {
-    width: 100% !important;
-    max-width: 100% !important;
-    height: auto !important;
-    display: block !important;
-  }
-
-  .texto {
-    order: 3;
-    width: 100%;
-    text-align: left;
-    padding-left: 0;
-  }
-
   .titulo {
-    font-size: 2.8em;
+    font-size: 3.2em;
     text-align: center;
-    padding: 0 10px;
   }
 
   .subtitulo {
-    font-size: 1.4em;
     text-align: center;
+    font-size: 1.8em;
   }
 
-  .arabesco-linha {
-    margin: 0.4em auto;
-    content: url('https://i.ibb.co/cS4Zhg7g/arabesco-linha.png');
+  .video-wrapper {
+    width: 100%;
+    order: 2;
   }
 
-  .form-box {
+  video {
     width: 100%;
   }
 
-  .arabesco-superior {
-    width: 180px;
+  .texto {
+    order: 1;
+    align-items: center;
+    text-align: center;
   }
 
-  .arabesco-inferior {
-    width: 180px;
+  .convite-texto, .form-box {
+    text-align: left;
   }
 }
